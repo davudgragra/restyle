@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Заголовок профиля -->
+        <TextView
+            android:id="@+id/tvProfileTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мой профиль"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Карточка пользователя -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/profile_card_background"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Аватар -->
+            <ImageView
+                android:id="@+id/ivUserAvatar"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/ic_profile"
+                android:background="@color/gray_light"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Информация о пользователе -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvUserName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Имя пользователя"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvUserEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="email@example.com"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvUserLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Местоположение"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvUserRating"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Рейтинг: 5.0"
+                    android:textSize="14sp"
+                    android:textColor="@color/gray" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Кнопки действий -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Настройки"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnChats"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Мои чаты"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- Кнопка выхода -->
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выйти"
+            android:backgroundTint="@color/red"
+            android:textColor="@color/white"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Заголовок товаров -->
+        <TextView
+            android:id="@+id/tvMyProductsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мои товары"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Сообщение если нет товаров -->
+        <TextView
+            android:id="@+id/tvNoProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="У вас пока нет товаров"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="16dp"
+            android:visibility="gone" />
+
+        <!-- Список товаров пользователя -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewUserProducts"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>

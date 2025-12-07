@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_margin="4dp"
+    android:background="@drawable/product_item_background">
+
+    <ImageView
+        android:id="@+id/ivProductImage"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_placeholder"
+        android:background="@color/gray_light" />
+
+    <!-- Статус товара (видим только в режиме управления) -->
+    <TextView
+        android:id="@+id/tvProductStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Статус: Доступен"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:padding="4dp"
+        android:gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvProductTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Название товара"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:padding="8dp"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <TextView
+        android:id="@+id/tvProductPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0 ₽"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvProductCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Категория"
+        android:textSize="12sp"
+        android:textColor="@color/gray"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="4dp" />
+
+    <!-- Продавец с аватаром -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="8dp"
+        android:paddingBottom="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/ivSellerAvatar"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"
+            android:scaleType="centerCrop"
+            android:layout_marginEnd="6dp" />
+
+        <TextView
+            android:id="@+id/tvSellerName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Продавец"
+            android:textSize="11sp"
+            android:textColor="@color/gray"
+            android:maxLines="1"
+            android:ellipsize="end" />
+
+    </LinearLayout>
+
+</LinearLayout>

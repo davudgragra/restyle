@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="product_statuses">
+        <item>available</item>
+        <item>reserved</item>
+        <item>sold</item>
+    </string-array>
+</resources>

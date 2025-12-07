@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Используйте Material Design иконки -->
+    <item
+        android:id="@+id/action_refresh"
+        android:title="Обновить"
+        android:icon="@drawable/ic_refresh"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_logout_admin"
+        android:title="Выйти"
+        android:icon="@drawable/ic_logout"
+        app:showAsAction="ifRoom" />
+
+</menu>
